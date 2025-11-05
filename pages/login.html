@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registre - Naterra</title>
+  <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+
+  <!-- LOGO -->
+  <img src="/static/img/logo.svg" alt="Naterra" class="logo" style="position:relative;z-index:9999;">
+
+  <!-- LLUNA -->
+  <div class="moon-box">
+    <div class="moon">
+      <div class="crater c1"></div>
+      <div class="crater c2"></div>
+      <div class="crater c3"></div>
+      <div class="crater c4"></div>
+      <div class="crater c5"></div>
+      <div class="crater c6"></div>
+      <div class="crater c7"></div>
+    </div>
+  </div>
+
+  <!-- FORMULARI -->
+  <div class="form">
+    <form>
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" placeholder="Ex: Marta" required />
+
+      <label for="cognom">Cognom</label>
+      <input type="text" id="cognom" placeholder="Ex: Pons" required />
+
+      <label for="email">Correu electrònic</label>
+      <input type="email" id="email" placeholder="marta@naterrra.cat" required />
+
+      <label for="pass">Contrasenya</label>
+      <input type="password" id="pass" placeholder="Mínim 8 caràcters" required />
+
+      <button type="submit" class="btn">Crear compte</button>
+    </form>
+
+    <div class="footer">
+      Ja tens compte? <a href="#">Inicia sessió</a>
+    </div>
+  </div>
+
+</body>
+</html>
