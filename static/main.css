@@ -44,7 +44,7 @@ body {
 }
 .australia{
     position:absolute;
-    width:900px; height:900px;
+    width: 1100px; height:900px;
     border-radius:50%;
     overflow:hidden;
     box-shadow:
@@ -92,9 +92,9 @@ body {
     transform:scale(1.1);
 }
 /* 5 ICONOS → 5 TAMAÑOS DIFERENTES */
-.sidebar .nav-btn:nth-child(1) img { width:80px; }  /* Home */
-.sidebar .nav-btn:nth-child(2) img { width:117px; }  /* Perfil */
-.sidebar .nav-btn:nth-child(3) img { width:48px; }  /* Ranking */
+.sidebar .nav-btn:nth-child(1) img { width:80px; margin-top: 9px;  }  /* Home */
+.sidebar .nav-btn:nth-child(2) img { width:117px; margin-top: 9px; }  /* Perfil */
+.sidebar .nav-btn:nth-child(3) img { width:48px; margin-bottom: 7px; }  /* Ranking */
 .sidebar .nav-btn:nth-child(4) img { width:75px; }  /* Repàs */
 .sidebar .nav-btn:nth-child(5) img { width:76px; }  /* Config */
 
