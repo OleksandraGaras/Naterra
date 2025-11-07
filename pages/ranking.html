@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ranking - Naterra</title>
   <link rel="stylesheet" href="/static/main.css">
 </head>
+
 <body class="body_mapa">
 
   <!-- TU LOGO -->
-  <img src="/static/img/logo.svg" alt="Naterra" class="logo">
+  <img src="/static/img/logo.svg" alt="Naterra" class="logo" style="left: 770px; top: 0px;">
 
   <!-- LUNA + AUSTRALIA -->
   <div class="australia">
@@ -18,12 +20,55 @@
 
   <!-- NAVBAR -->
   <div class="sidebar">
-      <div class="nav-btn"><img src="/static/img/homepage.png"></div>
-      <div class="nav-btn"><img src="/static/img/perfil.png"></div>
-      <div class="nav-btn"><img src="/static/img/ranking.png"></div>
-      <div class="nav-btn"><img src="/static/img/repas.png"></div>
-      <div class="nav-btn"><img src="/static/img/configuracio.png"></div>
+    <div class="nav-btn"><img src="/static/img/homepage.png"></div>
+    <div class="nav-btn"><img src="/static/img/perfil.png"></div>
+    <div class="nav-btn"><img src="/static/img/ranking.png"></div>
+    <div class="nav-btn"><img src="/static/img/repas.png"></div>
+    <div class="nav-btn"><img src="/static/img/configuracio.png"></div>
   </div>
 
+  <div class="rankings" style="z-index: 9999;">
+    <!-- 3 CÍRCULOS TOP 3 -->
+    <div class="top3">
+      <div class="top-circle"><img src="/static/img/top1.jpg">
+        <div class="top-pos">1</div>
+      </div>
+      <div class="top-circle"><img src="/static/img/top2.jpg">
+        <div class="top-pos">2</div>
+      </div>
+      <div class="top-circle"><img src="/static/img/top3.jpg">
+        <div class="top-pos">3</div>
+      </div>
+    </div>
+
+    <!-- RANKING COMPLETO -->
+    <div class="ranking-box">
+      <h3>Ranking Global</h3>
+      <div class="rank-row"><span class="rank-name">1. LunaQueen</span><span class="rank-score">14.320</span></div>
+      <div class="rank-row"><span class="rank-name">2. StarPilot</span><span class="rank-score">13.890</span></div>
+      <div class="rank-row"><span class="rank-name">3. CosmoKid</span><span class="rank-score">12.710</span></div>
+      <div class="rank-row"><span class="rank-name">4. AstroMax</span><span class="rank-score">11.200</span></div>
+      <div class="rank-row"><span class="rank-name">5. NovaGirl</span><span class="rank-score">10.850</span></div>
+      <div class="rank-row"><span class="rank-name">6. Tu</span><span class="rank-score">9.920</span></div>
+    </div>
+  </div>
+
+  <!-- BARRA DERECHA 25% -->
+  <div class="right-bar">
+    <div class="user">
+      <img src="/static/img/avatar.png" class="avatar" alt="Avatar">
+      <div class="user-name">Explorador Max</div>
+    </div>
+
+    <div class="ship">
+      <div class="ship-title">La teva nau</div>
+      <img src="/static/img/mi_nave.png" class="ship-img" alt="Nau">
+    </div>
+  </div>
+
+  <!-- BOTÓN REPÀS -->
+  <div class="repas-circle">REPÀS</div>
+
 </body>
+
 </html>
