@@ -402,3 +402,76 @@ input::placeholder {color:#aaa;}
     0%,100%{transform:translateX(-50%) translateY(0)}
     50%{transform:translateX(-50%) translateY(-8px)}
 }
+body.historia-2 {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  /* Fons senzill */
+  background: url("E:/2nDAW/PROJECT/Naterra/static/img/planeta.png") no-repeat center center fixed;
+  background-size: cover;     /* ocupa tot l'espai de la pantalla */
+  background-color: #0a0e1a;  /* color de seguretat per si no carrega */
+  
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text-historia2 {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin: -150px auto 150px auto;
+  padding: 20px 30px;
+
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+
+.astronauta {
+  position: absolute;
+  bottom: 50px;    /* al costat inferior, pots ajustar-ho */
+  left: 40px;      /* al cantó esquerre */
+  width: 220px;    /* mida raonable, pots fer-la més gran o petita */
+  height: auto;
+  z-index: 3;      /* per davant del fons però darrere del text */
+  animation: flotant 4s ease-in-out infinite;
+}
+
+/* petita animació per donar-li moviment */
+@keyframes flotant {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.missatge-astronauta {
+  position: absolute;
+  bottom: 220px;   /* ajusta segons on està l’astronauta */
+  left: 260px;     /* una mica a la dreta d’ell */
+  color: #ffffff;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  animation: apareixer 2s ease forwards, flotant 4s ease-in-out infinite;
+}
+
+/* animació per fer-lo aparèixer suaument */
+@keyframes apareixer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
