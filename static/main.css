@@ -475,3 +475,33 @@ body.historia-2 {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* === Parts de la nau sobre el planeta === */
+.nau {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 80px; /* separació entre les tres parts */
+  z-index: 3;
+}
+
+.nau-part {
+  width: 180px; /* mida general de cada peça */
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.nau-part:hover {
+  transform: translateY(-10px) scale(1.05); /* petit efecte al passar-hi per sobre */
+}
+
+/* Si vols que les parts laterals estiguin una mica més elevades: */
+.nau-part.esquerra,
+.nau-part.dreta {
+  margin-bottom: 40px;
+}
