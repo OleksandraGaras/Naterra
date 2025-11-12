@@ -575,3 +575,196 @@ body.historia-2 {
 .nau-part.dreta {
   margin-bottom: 40px;
 }
+
+/* Estilos para la sección central de repàs per temes */
+.repas-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 950px;
+    max-width: 95%;
+    text-align: center;
+    z-index: 100;
+}
+
+.repas-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.repas-underline {
+    height: 4px;
+    background-color: white;
+    width: 100%;
+    margin: 10px auto 40px;
+}
+
+.temes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.tema-box {
+    background-color: #f8f8f8;
+    border: 3px solid #333;
+    border-radius: 15px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tema-box:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+}
+
+/* 3 videos en fila */
+.videos-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.video-box {
+    background-color: #222;
+    height: 180px;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-box::after {
+    content: "▶";
+    font-size: 4rem;
+    opacity: 0.7;
+}
+
+.video-box:hover {
+    transform: scale(1.05);
+}
+
+/* 2 fotos grandes debajo */
+.fotos-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.foto-box {
+    background-color: #f0f0f0;
+    height: 300px;
+    border: 4px dashed #999;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.3rem;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.foto-box:hover {
+    border-color: #333;
+    background-color: #e8e8e8;
+}
+/* Mini header */
+.pregunta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.vidas {
+    display: flex;
+    gap: 12px;
+}
+
+.corazon {
+    font-size: 2.2rem;
+}
+
+/* Pregunta principal */
+.pregunta-texto {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 35px;
+    color: white;
+    line-height: 1.3;
+}
+
+/* Respuestas */
+.respuestas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.btn-respuesta {
+    background: #435896;
+    border: 3px solid #333;
+    border-radius: 20px;
+    padding: 22px;
+    font-size: 1.4rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-respuesta:hover {
+    background: #e0e0e0;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* FOTO - MISMA ALTURA QUE ANTES (250px) */
+.pregunta-imagen {
+    width: 100%;
+    height: 250px;
+    background: #f0f0f0;
+    border: 4px dashed #999;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.pregunta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* para que la foto real se ajuste perfectamente */
+    display: block;
+}
