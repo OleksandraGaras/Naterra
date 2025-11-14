@@ -767,4 +767,74 @@ body.historia-2 {
     height: 100%;
     object-fit: cover; /* para que la foto real se ajuste perfectamente */
     display: block;
-}
+    }
+
+  body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .text-historia {
+      max-width: 800px;
+      font-size: 1.4em;
+      margin-bottom: 50px;
+      z-index: 2;
+      line-height: 1.5;
+    }
+
+    /* LOGO */
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+      z-index: 2;
+      filter: drop-shadow(0 0 10px #fff);
+    }
+
+    /* NAU */
+    .nau {
+      width: 450px;
+      z-index: 2;
+      margin-bottom: 10px;
+      position: relative; /* per posar el laç a sobre */
+    }
+
+    /* LAZO */
+    .lazo {
+      position: absolute;
+      top: 10%;       /* una mica més avall dins la nau */
+      left: 8%;       /* una mica més cap a dins de l’esquerra */
+      width: 80px;    /* més petit per encaixar millor */
+      transform: rotate(-10deg); /* lleuger gir per adaptar-se */
+      z-index: 3;
+    }
+
+    /* ESTRELLES */
+    .estrella {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: parpelleig 2s infinite ease-in-out;
+      box-shadow: 0 0 8px 2px white; /* Efecte de brillantor */
+    }
+
+    @keyframes parpelleig {
+      0%, 100% {
+        opacity: 0.2;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.4);
+      }
+    }
