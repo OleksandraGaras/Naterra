@@ -50,31 +50,31 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
         });
         document.getElementById('p2').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta2.html';
         });
         document.getElementById('p3').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta3.html';
         });
         document.getElementById('p4').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta4.html';
         });
         document.getElementById('p5').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta5.html';
         });
         document.getElementById('p6').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta6.html';
         });
         document.getElementById('p7').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta7.html';
         });
         document.getElementById('p8').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta8.html';
         });
         document.getElementById('p9').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta9.html';
         });
         document.getElementById('p10').addEventListener('click', function () {
-            window.location.href = '/pages/capitulos/capitulo1/pregunta1.html';
+            window.location.href = '/pages/capitulos/capitulo1/pregunta10.html';
         });
     }
 
