@@ -3,84 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Final 2</title>
-  <link rel="stylesheet" href="E:/2nDAW/PROJECT/Naterra/static/main.css">
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="/static/main.css">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="E:/2nDAW/PROJECT/Naterra/static/img/favicon_naterra.png">
-
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .text-historia {
-      max-width: 800px;
-      font-size: 1.4em;
-      margin-bottom: 50px;
-      z-index: 2;
-      line-height: 1.5;
-    }
-
-    /* LOGO */
-    .logo {
-      width: 120px;
-      margin-bottom: 20px;
-      z-index: 2;
-      filter: drop-shadow(0 0 10px #fff);
-    }
-
-    /* NAU */
-    .nau {
-      width: 450px;
-      z-index: 2;
-      margin-bottom: 10px;
-      position: relative; /* per posar el laç a sobre */
-    }
-
-    /* LAZO */
-    .lazo {
-      position: absolute;
-      top: 10%;       /* una mica més avall dins la nau */
-      left: 8%;       /* una mica més cap a dins de l’esquerra */
-      width: 80px;    /* més petit per encaixar millor */
-      transform: rotate(-10deg); /* lleuger gir per adaptar-se */
-      z-index: 3;
-    }
-
-    /* ESTRELLES */
-    .estrella {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: parpelleig 2s infinite ease-in-out;
-      box-shadow: 0 0 8px 2px white; /* Efecte de brillantor */
-    }
-
-    @keyframes parpelleig {
-      0%, 100% {
-        opacity: 0.2;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.4);
-      }
-    }
-  </style>
+  <link rel="icon" type="image/png" href="/static/img/favicon_naterra.png">
 </head>
-<body>
+
+<body class="final2">
 
   <!-- ESTRELLES -->
   <div class="estrella" style="top:10%; left:15%; width:5px; height:5px; animation-delay:0s;"></div>
@@ -107,16 +38,15 @@
   <!-- LOGO -->
   <img src="/static/img/logo.svg" alt="Naterra" class="logo">
 
-  <!-- TEXT -->
-  <div class="text-historia">
-        Enhorabona, Capità! 🏆<br><br>
-        Has aconseguit reparar la nau i restaurar tots els sistemes. Tots els reptes han estat superats i les teves habilitats han quedat demostrades.
-        La nau està llesta, els motors ronronegen i les estrelles esperen la teva propera aventura.<br><br>
-
-        Prepara’t per enlairar-te… la galàxia és teva!
+  <!-- TEXT FINAL -->
+  <div class="text-historia_final2">
+      Enhorabona, Capità! 🏆<br><br>
+      Has aconseguit reparar la nau i restaurar tots els sistemes. Tots els reptes han estat superats i les teves habilitats han quedat demostrades.
+      La nau està llesta, els motors ronronegen i les estrelles esperen la teva propera aventura.<br><br>
+      Prepara’t per enlairar-te… la galàxia és teva!
   </div>
 
-  <!-- IMATGE DE LA NAU -->
+  <!-- NAU + LLAÇ -->
   <div style="position: relative; display: inline-block;">
     <img src="/static/img/nave.png" alt="Nau espacial" class="nau">
     <img src="/static/img/lazo.png" alt="Llaç" class="lazo">

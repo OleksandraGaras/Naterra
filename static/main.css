@@ -768,74 +768,271 @@ body.historia-2 {
     height: 100%;
     object-fit: cover; /* para que la foto real se ajuste perfectamente */
     display: block;
-    }
+    
+}
+body.configuracio {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 
-  body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-      position: relative;
-    }
+  /* Fons amb el planeta */
+  background: url("E:/2nDAW/PROJECT/Naterra/static/img/planeta.png") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #0a0e1a;
+  
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* així comença des de dalt, no al centre */
+}
 
-    .text-historia {
-      max-width: 800px;
-      font-size: 1.4em;
-      margin-bottom: 50px;
-      z-index: 2;
-      line-height: 1.5;
-    }
+/* Sidebar */
+.sidebar.configuracio {
+  position: fixed;
+  left: 30px; 
+  top: 50%;
+  transform: translateY(-50%);
+  background: #28428C;
+  padding: 20px 16px;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+}
 
-    /* LOGO */
-    .logo {
-      width: 120px;
-      margin-bottom: 20px;
-      z-index: 2;
-      filter: drop-shadow(0 0 10px #fff);
-    }
+/* === CONFIGURACIÓ === */
+.configuracio {
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
 
-    /* NAU */
-    .nau {
-      width: 450px;
-      z-index: 2;
-      margin-bottom: 10px;
-      position: relative; /* per posar el laç a sobre */
-    }
+/* Caixa del formulari */
+/* Caixa del formulari */
+.config-form {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 50px 70px; /* més espai interior */
+  width: 90%;
+  max-width: 560px; /* abans era 420px */
+  box-shadow: 0 0 30px rgba(192, 132, 252, 0.3);
+  text-align: center;
+  margin-top: 140px; /* separació sota el logo */
+}
 
-    /* LAZO */
-    .lazo {
-      position: absolute;
-      top: 10%;       /* una mica més avall dins la nau */
-      left: 8%;       /* una mica més cap a dins de l’esquerra */
-      width: 80px;    /* més petit per encaixar millor */
-      transform: rotate(-10deg); /* lleuger gir per adaptar-se */
-      z-index: 3;
-    }
 
-    /* ESTRELLES */
-    .estrella {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: parpelleig 2s infinite ease-in-out;
-      box-shadow: 0 0 8px 2px white; /* Efecte de brillantor */
-    }
+.config-form h2 {
+  color: #ffacd6;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
 
-    @keyframes parpelleig {
-      0%, 100% {
-        opacity: 0.2;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.4);
-      }
-    }
+body.final2 {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-historia_final2 {
+  max-width: 800px;
+  font-size: 1.4em;
+  margin-bottom: 100px;
+  z-index: 2;
+  line-height: 1.5;
+}
+
+/* LOGO */
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px #fff);
+}
+
+/* NAU */
+.nau {
+  width: 450px;
+  z-index: 2;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* LLAÇ COL·LOCAT BEN ENDINS */
+.lazo {
+  position: absolute;
+  top: 6%;
+  left: 4%;
+  width: 70px;
+  transform: rotate(-10deg);
+  z-index: 3;
+}
+
+/* ESTRELLES */
+.estrella {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: parpelleig 2s infinite ease-in-out;
+  box-shadow: 0 0 8px 2px white;
+}
+
+@keyframes parpelleig {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+
+/* === AJUSTOS QUE M’HAS PASSAT === */
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #888;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #a855f7;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Idioma */
+.language-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 12px;
+  outline: none;
+  transition: 0.3s;
+}
+.language-select:hover {
+  border-color: #c084fc;
+}
+
+/* Final Missatge */
+.final-missatge {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 50px 60px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 120px;
+  box-shadow: 0 0 30px rgba(192, 132, 252, 0.3);
+}
+
+.final-missatge h2 {
+  color: #ffacd6;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 172, 214, 0.6);
+}
+
+.final-missatge p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Botons finals */
+.botons-final {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.boto {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #a855f7;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.boto:hover {
+  background: #a855f7;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.boto.repasar {
+  border-color: #4ade80;
+}
+
+.boto.repasar:hover {
+  background: #4ade80;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
+}
+
+.boto.acabar {
+  border-color: #f87171;
+}
+
+.boto.acabar:hover {
+  background: #f87171;
+  box-shadow: 0 0 20px rgba(248, 113, 113, 0.5);
+}
