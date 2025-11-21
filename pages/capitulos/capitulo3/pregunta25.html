@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta25 - Naterra</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body class="body_mapa">
+
+    <!-- TU LOGO -->
+    <img src="/static/img/logo.svg" alt="Naterra" class="logo" style="left: 770px; top: 0px;">
+
+    <!-- LUNA + AUSTRALIA -->
+    <div class="australia">
+        <img src="/static/img/Australia_satellite_plane.jpg" alt="Australia">
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="sidebar">
+        <div class="nav-btn" id="navHome"><img src="/static/img/homepage.png"></div>
+        <div class="nav-btn" id="navPerfil"><img src="/static/img/perfil.png"></div>
+        <div class="nav-btn" id="navRanking"><img src="/static/img/ranking.png"></div>
+        <div class="nav-btn" id="navRepasos"><img src="/static/img/repas.png"></div>
+        <div class="nav-btn" id="navConfig"><img src="/static/img/configuracio.png"></div>
+    </div>
+
+    <div class="rankings" style="z-index: 9999; width: 900px; left: 40%;">
+
+        <!-- SECCIÓN GRANDE DE LA PREGUNTA -->
+        <div class="pregunta-container">
+            <!-- Mini header -->
+            <div class="pregunta-header">
+                <div>Pregunta <strong>5/10</strong></div>
+                <div class="vidas">
+                    <span class="corazon">❤️</span>
+                    <span class="corazon">❤️</span>
+                    <span class="corazon">❤️</span>
+                </div>
+            </div>
+
+            <!-- Pregunta principal -->
+            <div class="pregunta-texto">
+                1. Què és una matèria primera?
+            </div>
+
+            <!-- 4 respuestas -->
+            <div class="respuestas">
+                <div class="btn-respuesta">A. Un tauló de fusta</div>
+                <div class="btn-respuesta">B. El material extret directament de la natura</div> <!--Correcta-->
+                <div class="btn-respuesta">C. Un plàstic reciclat</div>
+                <div class="btn-respuesta">D. Un objecte Fabricat</div>
+            </div>
+
+            <!-- FOTO - ALTURA FIJA 250px (igual que antes) -->
+            <div class="pregunta-imagen">
+                <!-- CUANDO TENGAS LA FOTO, SOLO CAMBIA EL src -->
+                <img src="https://via.placeholder.com/900x250/e0e0e0/999999?text=Foto+Teoria+Tema+1"
+                    alt="Foto de la teoria">
+            </div>
+            <!-- ↑ CAMBIA ESTA LÍNEA CUANDO TENGAS LA FOTO REAL -->
+            <!-- Ejemplo local: src="/static/img/teoria_tema1.jpg" -->
+            <!-- Ejemplo externo: src="https://i.imgur.com/tu_foto.jpg" -->
+            <button id="next" class=""><a href="pregunta2.html">Següent</a></button>
+
+        </div>
+    </div>
+
+
+    <!-- BARRA DERECHA 25% -->
+    <div class="right-bar">
+        <div class="user">
+            <img src="/static/img/avatar.png" class="avatar" alt="Avatar">
+            <div class="user-name">Explorador Max</div>
+        </div>
+
+        <div class="ship">
+            <div class="ship-title">La teva nau</div>
+            <img src="/static/img/mi_nave.png" class="ship-img" alt="Nau">
+        </div>
+
+        <div class="ranking">
+            <h3>Top Exploradors</h3>
+            <div class="rank-row"><span class="rank-name">1. LunaQueen</span><span class="rank-score">12.450</span>
+            </div>
+            <div class="rank-row"><span class="rank-name">2. StarPilot</span><span class="rank-score">11.890</span>
+            </div>
+            <div class="rank-row"><span class="rank-name">3. CosmoKid</span><span class="rank-score">10.720</span></div>
+        </div>
+    </div>
+
+    <!-- BOTÓN REPÀS -->
+    <div class="repas-circle" id="navRanking">REPÀS</div>
+    <script src="/funcionalidades.js"></script>
+</body>
+
+</html>
