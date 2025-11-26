@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <title>Configuracio</title>
-  <link rel="stylesheet" href="../static/main.css">
+  <link rel="stylesheet" href="/static/main.css">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="../static/img/favicon_naterra.png">
+  <link rel="icon" type="image/png" href="/static/img/favicon_naterra.png">
 </head>
+
 <body class="configuracio">
   <!-- LOGO -->
-  <img src="../static/img/logo.svg" alt="Naterra" class="logo">
+  <img src="/static/img/logo.svg" alt="Naterra" class="logo">
 
-   <!-- NAVBAR --> 
-    <div class="sidebar">
-        <div class="nav-btn"><img src="E:/2nDAW/PROJECT/Naterra/static/img/homepage.png" alt="Inici"></div>
-        <div class="nav-btn"><img src="E:/2nDAW/PROJECT/Naterra/static/img/perfil.png" alt="Perfil"></div>
-        <div class="nav-btn"><img src="E:/2nDAW/PROJECT/Naterra/static/img/ranking.png" alt="Ranking"></div>
-        <div class="nav-btn"><img src="E:/2nDAW/PROJECT/Naterra/static/img/repas.png" alt="Repàs"></div>
-        <div class="nav-btn"><img src="E:/2nDAW/PROJECT/Naterra/static/img/configuracio.png" alt="Configuració"></div>
-    </div>
+  <!-- NAVBAR -->
+  <div class="sidebar">
+    <div class="nav-btn" id="navHome"><img src="/static/img/homepage.png"></div>
+    <div class="nav-btn" id="navPerfil"><img src="/static/img/perfil.png"></div>
+    <div class="nav-btn" id="navRanking"><img src="/static/img/ranking.png"></div>
+    <div class="nav-btn" id="navRepasos"><img src="/static/img/repas.png"></div>
+    <div class="nav-btn" id="navConfig"><img src="/static/img/configuracio.png"></div>
+  </div>
 
-    <!-- FORMULARI DE CONFIGURACIÓ -->
-<div class="config-form">
-  <h2>Configuració</h2>
+  <!-- FORMULARI DE CONFIGURACIÓ -->
+  <div class="config-form">
+    <h2>Configuració</h2>
 
-  <form>
-    <!-- So -->
-    <div class="setting">
-      <label for="so">So</label>
-      <label class="switch">
-        <input type="checkbox" id="so" checked>
-        <span class="slider"></span>
-      </label>
-    </div>
+    <form>
+      <!-- So -->
+      <div class="setting">
+        <label for="so">So</label>
+        <label class="switch">
+          <input type="checkbox" id="so" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
 
-    <!-- Música -->
-    <div class="setting">
-      <label for="musica">Música</label>
-      <label class="switch">
-        <input type="checkbox" id="musica" checked>
-        <span class="slider"></span>
-      </label>
-    </div>
+      <!-- Música -->
+      <div class="setting">
+        <label for="musica">Música</label>
+        <label class="switch">
+          <input type="checkbox" id="musica" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
 
-    <!-- Idioma -->
-    <div class="setting">
-      <label for="idioma">Idioma</label>
-      <select id="idioma" class="language-select">
-        <option value="ca" selected>Català</option>
-        <option value="es">Castellà</option>
-      </select>
-    </div>
-  </form>
-</div>
+      <!-- Idioma -->
+      <div class="setting">
+        <label for="idioma">Idioma</label>
+        <select id="idioma" class="language-select">
+          <option value="ca" selected>Català</option>
+          <option value="es">Castellà</option>
+        </select>
+      </div>
+    </form>
+  </div>
 
-
+<script src="/funcionalidades.js"></script>
 </body>
+</html>

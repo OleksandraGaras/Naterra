@@ -334,16 +334,17 @@ body {
 #ch3{top:42%; left:49%;}
 #ch4{top:25%; right:25%;}
 #ch5{top: 24%; left:34%;}
-#ch1  { bottom:12%; left:28%; }
-#ch2  { bottom:22%; right:32%; }
-#ch3  { top:48%; left:38%; }
-#ch4  { top:28%; right:28%; }
-#ch5  { top:15%; left:42%; }
-#ch6  { bottom:35%; left:45%; }
-#ch7  { top:30%; right:38%; }
-#ch8  { bottom:18%; left:48%; }
-#ch9  { top:22%; left:25%; }
-#ch10 { top:45%; left:60%; }
+
+#p1  { bottom:12%; left:28%; }
+#p2  { bottom:22%; right:32%; }
+#p3  { top:48%; left:38%; }
+#p4  { top:28%; right:28%; }
+#p5  { top:15%; left:42%; }
+#p6  { bottom:35%; left:45%; }
+#p7  { top:30%; right:38%; }
+#p8  { bottom:18%; left:48%; }
+#p9  { top:22%; left:25%; }
+#p10 { top:45%; left:60%; }
 .moon {
     width:100%; height:100%;
     background:radial-gradient(circle at 35% 30%,
