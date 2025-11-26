@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // NAVEGACION DE LA BARRA DE NAVEGACION
     if (document.getElementById('navHome')) {
         document.getElementById('navHome').addEventListener('click', function () {
-            window.location.href = 'mapa_capitulos.html';
+            window.location.href = '/';
         });
 
         document.getElementById('navPerfil').addEventListener('click', function () {
