@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultat del Capítol - Naterra</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <style>
+        .resultado-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            margin: 100px auto;
+            max-width: 500px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .estadisticas {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+        
+        .correcta-stat {
+            color: #28a745;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .incorrecta-stat {
+            color: #dc3545;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .btn-continuar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .btn-repetir {
+            background-color: #ffc107;
+            color: #212529;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body class="body_mapa">
+    <!-- TU LOGO -->
+    <img src="/static/img/logo.svg" alt="Naterra" class="logo">
+
+    <!-- NAVBAR -->
+    <div class="sidebar">
+        <div class="nav-btn" id="navHome"><img src="/static/img/homepage.png"></div>
+        <div class="nav-btn" id="navPerfil"><img src="/static/img/perfil.png"></div>
+        <div class="nav-btn" id="navRanking"><img src="/static/img/ranking.png"></div>
+        <div class="nav-btn" id="navRepasos"><img src="/static/img/repas.png"></div>
+        <div class="nav-btn" id="navConfig"><img src="/static/img/configuracio.png"></div>
+    </div>
+
+    <div class="resultado-container">
+        <h1>Resultat Capítol <span id="capitulo-numero"></span></h1>
+        <p>Has completat el capítol! Aquests són els teus resultats:</p>
+        
+        <div class="estadisticas">
+            <div>
+                <div class="correcta-stat" id="correctas-count">0</div>
+                <div>Correctes</div>
+            </div>
+            <div>
+                <div class="incorrecta-stat" id="incorrectas-count">0</div>
+                <div>Incorrectes</div>
+            </div>
+        </div>
+        
+        <div id="mensaje-resultado"></div>
+        
+        <button class="btn-continuar" id="btn-continuar">Continuar al Següent Capítol</button>
+        <button class="btn-repetir" id="btn-repetir">Repetir Capítol</button>
+        <button class="btn-continuar" id="btn-mapa">Tornar al Mapa</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const capitulo = parseInt(urlParams.get('capitulo')) || 1;
+            
+            document.getElementById('capitulo-numero').textContent = capitulo;
+            
+            // Obtener resultados del localStorage
+            const resultados = JSON.parse(localStorage.getItem('resultadosCapitulos')) || {};
+            const resultadoCapitulo = resultados[`capitulo${capitulo}`] || { correctas: 0, incorrectas: 0 };
+            
+            const correctas = resultadoCapitulo.correctas;
+            const incorrectas = resultadoCapitulo.incorrectas;
+            
+            document.getElementById('correctas-count').textContent = correctas;
+            document.getElementById('incorrectas-count').textContent = incorrectas;
+            
+            // Mensaje según el resultado
+            const mensajeElement = document.getElementById('mensaje-resultado');
+            if (correctas === 10) {
+                mensajeElement.innerHTML = '<h3 style="color: #28a745;">🎉 Perfecte! Has encertat totes les preguntes!</h3>';
+            } else if (correctas >= 7) {
+                mensajeElement.innerHTML = '<h3 style="color: #17a2b8;">👍 Molt bé! Bon treball!</h3>';
+            } else if (correctas >= 5) {
+                mensajeElement.innerHTML = '<h3 style="color: #ffc107;">💪 No està malament! Pots millorar!</h3>';
+            } else {
+                mensajeElement.innerHTML = '<h3 style="color: #dc3545;">📚 No et rendeixis! Torna a intentar-ho!</h3>';
+            }
+            
+            // Botones de navegación
+            document.getElementById('btn-continuar').addEventListener('click', function() {
+                if (capitulo < 5) {
+                    localStorage.setItem('capituloActual', (capitulo + 1).toString());
+                    window.location.href = 'mapa_niveles.html';
+                } else {
+                    window.location.href = 'mapa_capitulos.html';
+                }
+            });
+            
+            document.getElementById('btn-repetir').addEventListener('click', function() {
+                // Resetear las preguntas de este capítulo
+                const inicio = (capitulo - 1) * 10 + 1;
+                const fin = capitulo * 10;
+                const estadoPreguntas = JSON.parse(localStorage.getItem('estadoPreguntas')) || {};
+                
+                for (let i = inicio; i <= fin; i++) {
+                    estadoPreguntas[i] = 'no-completada';
+                }
+                
+                localStorage.setItem('estadoPreguntas', JSON.stringify(estadoPreguntas));
+                localStorage.setItem('capituloActual', capitulo.toString());
+                window.location.href = 'mapa_niveles.html';
+            });
+            
+            document.getElementById('btn-mapa').addEventListener('click', function() {
+                window.location.href = 'mapa_capitulos.html';
+            });
+        });
+    </script>
+    <script src="/funcionalidades.js"></script>
+</body>
+</html>
